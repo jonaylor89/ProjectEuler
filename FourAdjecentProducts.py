@@ -1,13 +1,14 @@
 
-productList = []
+productList = set()
 
 
 def addProducts(num):
+
     for x in range(len(num) - 12):
-        sum = num[x]
+        sum = int(num[x])
         for y in range(1, 13):
             sum = sum * int(num[x + y])
-        productList.append(sum)
+            productList.add(sum)
 
 
 def main():
@@ -37,7 +38,7 @@ def main():
     addProducts(large_string)
 
 
-    print(sorted(productList))
+    print(max(productList))
 
 
 if __name__ == "__main__":
