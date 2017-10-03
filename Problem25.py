@@ -9,5 +9,5 @@ def fib(limit):
         return (index+1, len(str(a)))
 
 if __name__ == '__main__':
-    answer = fib(1000)
+    answer = fib(20000)
     print(answer[0])
