@@ -1,4 +1,13 @@
 
+"""
+
+This module contains to function decorators
+that calculate the speed at which a function runs.
+the clock function outputs the speed and the output of the function
+it decorates and speed just outputs the speed and not the function output
+
+"""
+
 import time
 import functools
 
