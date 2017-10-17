@@ -1,7 +1,7 @@
 
-from SpeedTesting import speed
+from SpeedTesting import clock
 
-@speed
+@clock(results='show')
 def create_primes(limit):
     primes = [2]
     n = 3
