@@ -1,10 +1,8 @@
 
 """
 
-This module contains two function decorators
-that calculate the speed at which a function runs.
-the clock function outputs the speed and the output of the function
-it decorates and speed just outputs the speed and not the function output
+This module contains a function decorator that calculates the speed of a function.
+It has an optional argument for whether the user wants the results of the function or just the raw speed.
 
 """
 
