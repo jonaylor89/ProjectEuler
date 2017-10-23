@@ -1,34 +1,32 @@
-
-package main;
+package main
 
 import (
-  "fmt";
-  "math"
+	"fmt"
+	"math"
 )
 
-func main(){
+func main() {
 
-  var isPrime bool;
-  var sum int64 = 5;
+	var isPrime bool
+	var sum int64 = 5
 
-  for i := 5; i < 20000; i += 2{
+	for i := 5; i < 20000; i += 2 {
 
-    isPrime = true;
+		isPrime = true
 
-    for j := 3; float64(j) < math.Floor(math.Sqrt(float64(i)))+1; j += 2 {
-      if(i % j == 0){
-        isPrime = false;
-        break;
-      }
-    }
+		for j := 3; float64(j) < math.Floor(math.Sqrt(float64(i)))+1; j += 2 {
+			if i%j == 0 {
+				isPrime = false
+				break
+			}
+		}
 
-    if(isPrime == true){
-      sum += int64(i);
-    }
+		if isPrime == true {
+			sum += int64(i)
+		}
 
+	}
 
-  }
-
-  fmt.Printf("%d\n", sum);
+	fmt.Printf("%d\n", sum)
 
 }
