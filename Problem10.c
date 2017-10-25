@@ -7,7 +7,7 @@ int main(){
   int isPrime;
   long sum = 5;
 
-  for(int i = 5; i < 20000; i += 2){
+  for(int i = 5; i < 2000000; i += 2){
 
     isPrime = 1;
 

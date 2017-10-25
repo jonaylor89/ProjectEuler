@@ -10,7 +10,7 @@ func main() {
 	var isPrime bool
 	var sum int64 = 5
 
-	for i := 5; i < 20000; i += 2 {
+	for i := 5; i < 2000000; i += 2 {
 
 		isPrime = true
 
