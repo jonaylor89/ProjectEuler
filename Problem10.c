@@ -5,7 +5,7 @@
 int main(){
 
   int isPrime;
-  long sum = 5;
+  unsigned long sum = 5;
 
   for(int i = 5; i < 2000000; i += 2){
 
@@ -25,7 +25,7 @@ int main(){
 
   }
 
-  printf("%d\n", sum);
+  printf("%lu\n", sum);
 
   return 0;
 }

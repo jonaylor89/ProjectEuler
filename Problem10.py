@@ -4,8 +4,8 @@ from SpeedTesting import clock
 @clock(results='show')
 def create_primes(limit):
     primes = [2]
-    n = 3
-    while n < limit:
+
+    for n in range(3, limit, 2):
 
         possible_divisors = (x for x in primes if x <= n**(0.5))
 
@@ -14,7 +14,6 @@ def create_primes(limit):
                  break
         else:
             primes.append(n)
-        n += 2
 
     return primes
 
