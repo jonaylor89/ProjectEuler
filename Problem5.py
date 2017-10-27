@@ -5,7 +5,7 @@ def main(limit):
 
     while True:
 
-        smallest_number += 2
+        smallest_number += 6
 
         for i in range(1, limit+1):
             if smallest_number % i != 0:
