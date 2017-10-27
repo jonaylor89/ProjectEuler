@@ -1,6 +1,4 @@
 
-amicable_numbers = set()
-
 def d(num):
 
     factors = []
@@ -11,9 +9,10 @@ def d(num):
 
     return sum(factors)
 
+def main(limit):
+    amicable_numbers = set()
 
-if __name__ == '__main__':
-    for i in range(1, 10000):
+    for i in range(1, limit):
         ami = d(i)
 
         if d(ami) == i and ami != i:
@@ -22,3 +21,6 @@ if __name__ == '__main__':
 
 
     print(sum(amicable_numbers))
+
+if __name__ == '__main__':
+    main(10000)
