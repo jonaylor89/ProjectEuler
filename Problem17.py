@@ -81,7 +81,7 @@ def translate_hundreds(hundreds):
 
     return hundreds_place
 
-def main(number):
+def num_to_string(number):
 
     word = ""
 
@@ -106,6 +106,6 @@ if __name__ == '__main__':
     total = 0
 
     for i in range(1000):
-        total += len(main(i))
+        total += len(num_to_string(i))
 
     print(total + 11) # the eleven is for the final 1000
