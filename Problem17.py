@@ -81,33 +81,31 @@ def translate_hundreds(hundreds):
 
     return hundreds_place
 
-def main(limit):
+def main(number):
 
-    total = 0
+    word = ""
 
-    for i in range(1, limit):
+    if number < 10:
+        word = translate_ones(number)
 
-        if i < 10:
-            word = translate_ones(i)
+    elif number < 100:
+        word = translate_tens(number)
 
-            total += len(word)
+    elif number < 1000:
+        word = translate_hundreds(number)
 
-        elif i < 100:
-            word = translate_tens(i)
+    else:
+        print("Something has gone astray")
 
-            total += len(word)
-
-        elif i < 1000:
-            word = translate_hundreds(i)
-
-            total += len(word)
-
-        else:
-            print("Something has gone astray")
-
-    print(total + 11) # the eleven is for the final 1000
+    return word
 
 
 
 if __name__ == '__main__':
-    main(1000)
+
+    total = 0
+
+    for i in range(1000):
+        total += len(main(i))
+
+    print(total + 11) # the eleven is for the final 1000
