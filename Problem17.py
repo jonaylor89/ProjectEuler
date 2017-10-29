@@ -79,7 +79,6 @@ def translate_hundreds(hundreds):
     else:
         hundreds_place = "print something is astray in hundreds function"
 
-    print(hundreds_place)
     return hundreds_place
 
 def main(limit):
@@ -106,7 +105,7 @@ def main(limit):
         else:
             print("Something has gone astray")
 
-    print(total)
+    print(total + 11) # the eleven is for the final 1000
 
 
 
