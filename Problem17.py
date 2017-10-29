@@ -81,6 +81,35 @@ def translate_hundreds(hundreds):
 
     return hundreds_place
 
+
+def translate_thousands(thousands):
+
+        if thousands//1000 < 10:
+            thousands_place = translate_ones(thousands//1000)
+
+        elif thousands//1000 < 100:
+            thousands_place = translate_tens(thousands//1000)
+
+        elif thousands//1000 < 1000:
+            thousands_place = translate_hundreds(thousands//1000)
+
+        else:
+            print("Something has gone in the thousands function")
+
+        if thousands%1000 < 10:
+            last_part = translate_ones(thousands%1000)
+
+        elif thousands%1000 < 100:
+            last_part = translate_tens(thousands%1000)
+
+        elif thousands%1000 < 1000:
+            last_part = translate_hundreds(thousands%1000)
+
+        else:
+            print("Something has gone astray in second part of thousands functions")
+
+        return thousands_place + "thousand" + last_part
+
 def num_to_string(number):
 
     word = ""
@@ -94,6 +123,9 @@ def num_to_string(number):
     elif number < 1000:
         word = translate_hundreds(number)
 
+    elif number < 1000000:
+        word = translate_thousands(number)
+
     else:
         print("Something has gone astray")
 
@@ -105,7 +137,7 @@ if __name__ == '__main__':
 
     total = 0
 
-    for i in range(1000):
+    for i in range(1001):
         total += len(num_to_string(i))
 
-    print(total + 11) # the eleven is for the final 1000
+    print(total)
