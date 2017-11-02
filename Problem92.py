@@ -18,8 +18,6 @@ def main(limit):
         link = x
         while True:
 
-            link = square_digits(link)
-
             if link in cache.keys():
                 if cache[link] == 89:
                     cache[x] = 89
@@ -36,6 +34,8 @@ def main(limit):
             elif link == 1:
                 cache[x] = 1
                 break
+
+            link = square_digits(link)
 
 
     print(total)
