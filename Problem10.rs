@@ -32,27 +32,29 @@ fn is_prime(test: u64) -> bool {
             return false; 
         }
 
-        x = x + 6;
+        x += 6;
     }
 
     return true;
 }
 
 fn main() {
-    let number: u64 = 600851475143;
-    let end: i32 = (number as f64).sqrt() as i32;
-    let mut highest = 0;
-    let mut i = 3;
+    let limit = 2000000;
+    let mut sum: u64 = 5;
 
-    while i < end{
-        if is_prime(i as u64) {
-            if number % i as u64 == 0 {
-                highest = i; 
-            } 
+    let mut x = 5;
+    while x <= limit {
+        if is_prime(x) {
+            sum += x; 
+        }
+        x += 2;
+
+        if x <= limit && is_prime(x) {
+            sum += x; 
         }
 
-        i = i + 2;
+        x += 4
     }
 
-    println!("Highest prime factor {}", highest);
+    println!("Sum: {}", sum)
 }
